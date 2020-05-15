@@ -94,6 +94,8 @@ rm -rf ~/.docker/trust
 cp -r ~/.docker/trust.bak ~/.docker/trust
 ```
 
+Build and push v0.0.3 again.
+
 ```bash
 ./build_push.sh docker.io/$DOCKER_USERNAME/foobar001 v0.0.3
 ```
