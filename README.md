@@ -57,7 +57,7 @@ notary -s https://notary.docker.io -d ~/.docker/trust key list
 docker trust inspect --pretty docker.io/$DOCKER_USERNAME/foobar001
 ```
 
-### Build and push v0.0.3 with no `$HOME/.docker/trust`
+### Build and push v0.0.3 without `$HOME/.docker/trust`
 
 To simulate future CI runs without the Docker trust dir for keys, move the
 directory.
