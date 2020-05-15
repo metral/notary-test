@@ -38,7 +38,7 @@ Verify local key store, and inspect the image on DockerHub.
 
 ```bash
 notary -s https://notary.docker.io -d ~/.docker/trust key list
-docker trust inspect --pretty docker.io/metral/foobar001
+docker trust inspect --pretty docker.io/$DOCKER_USERNAME/foobar001
 ```
 
 ### Build and push v0.0.2
@@ -54,7 +54,7 @@ changed for the keys, and v0.0.2 should now be listed.
 
 ```bash
 notary -s https://notary.docker.io -d ~/.docker/trust key list
-docker trust inspect --pretty docker.io/metral/foobar001
+docker trust inspect --pretty docker.io/$DOCKER_USERNAME/foobar001
 ```
 
 ### Build and push v0.0.3 with no `$HOME/.docker/trust`
@@ -72,7 +72,7 @@ This is what a future CI run would look like that does not have `$HOME/.docker/t
 
 ```bash
 notary -s https://notary.docker.io -d ~/.docker/trust key list
-docker trust inspect --pretty docker.io/metral/foobar001
+docker trust inspect --pretty docker.io/$DOCKER_USERNAME/foobar001
 ```
 
 Try pushing v0.0.3, and notice that signing will fail based on what DockerHub
@@ -105,5 +105,5 @@ changed for the keys, and v0.0.3 should now be listed.
 
 ```bash
 notary -s https://notary.docker.io -d ~/.docker/trust key list
-docker trust inspect --pretty docker.io/metral/foobar001
+docker trust inspect --pretty docker.io/$DOCKER_USERNAME/foobar001
 ```
