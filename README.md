@@ -102,8 +102,8 @@ Build and push v0.0.3 again.
 
 This should push and sign successfully.
 
-Verify local key store, and inspect the image on DockerHub. Nothing should have
-changed for the keys, and v0.0.3 should now be listed.
+Verify local key store, and inspect the image on DockerHub. The keys should all
+be there locally, and v0.0.3 should now be listed.
 
 ```bash
 notary -s https://notary.docker.io -d ~/.docker/trust key list
