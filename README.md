@@ -87,11 +87,11 @@ This should fail to push and sign.
 ### Build and push v0.0.3 with `$HOME/.docker/trust`
 
 To simulate future CI runs without the Docker trust dir for keys, move the
-directory.
+directory back to where Docker expects it.
 
 ```bash
 rm -rf ~/.docker/trust
-cp -r ~/.docker/trust.bak/ ~/.docker/trust
+cp -r ~/.docker/trust.bak ~/.docker/trust
 ```
 
 ```bash
